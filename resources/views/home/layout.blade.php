@@ -19,49 +19,74 @@
 
 		<!-- External -->
 		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="css/home/main.css" />
+		<link rel="stylesheet" href="/css/home/main.css" />
+
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	</head>
 	<body>
-		<div class="w-nav">
-			<div class="w-wrapper">
-				<div class="w-logo">
-					<a href="/">Websters Removals</a>
-				</div>
-				<div class="w-links">
-					<a href="#" class="w-link">Home</a>
-					<a class="w-link" id="btn-services-menu">
-						Our Services <i id="fa-services-menu" class="fa fa-caret-down"></i>
-					</a>
-					<a href="#" class="w-link">
-						About Us <i id="fa-about-menu" class="fa fa-caret-down"></i>
-					</a>
-					<a href="#" class="w-link">Request a Quote</a>
-				</div>
+		<nav class="w-nav navbar navbar-expand-lg navbar-light">
+			<a class="w-logo navbar-brand" href="#">Websters Removals</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="w-link nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="w-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Our Services
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/services/local-and-national">Local & National</a>
+							<a class="dropdown-item" href="/services/storage">Storage</a>
+							<a class="dropdown-item" href="/services/international-removals">International Removals</a>
+							<a class="dropdown-item" href="/services/packing">Packing</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="w-link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							About Us
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/about/photo-gallery">Photo Gallery</a>
+							<a class="dropdown-item" href="/about/testimonials">Testimonials</a>
+							<a class="dropdown-item" href="/about/faq">FAQ</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="w-link nav-link" href="/request-a-quote">Request a Quote</a>
+					</li>
+				</ul>
 			</div>
-		</div>
-		<div class="w-sec-nav" id="services-menu">
-			<div class="w-wrapper">
-				<div class="w-links">
-					<a href="#" class="w-link">Local & National</a>
-					<a href="#" class="w-link">Storage</a>
-					<a href="#" class="w-link">International Removals</a>
-					<a href="#" class="w-link">Packing</a>
-				</div>
-			</div>
-		</div>
-		<div class="w-sec-nav" id="about-menu">
-			<div class="w-wrapper">
-				<a href="#" class="w-link">Photo Gallery</a>
-				<a href="#" class="w-link">Testimonials</a>
-				<a href="#" class="w-link">FAQ</a>
-			</div>
+		</nav>
+
+		@yield('banner-image')
+
+		<div class="container" style="margin-top: 80px;">
+			@yield('content')
 		</div>
 
+		@yield('full-view')
+
+		<div class="container">
+			<br /><br />
+			<hr />
+			Copyright &copy; Websters Removals Ltd {{ date("Y") }}. All Rights Reserved.
+			<br />
+			Built and managed by Ethan Webster | <a href="http://ethan-webster.com/" target="_blank">ethan-webster.com</a>
+		</div>
+
+		<br /><br />
 
 		<!-- JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://kit.fontawesome.com/64a4d46fd3.js" crossorigin="anonymous"></script>
 
-		<script src="js/home/main.js"></script>
+		<script src="/js/home/main.js"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 	</body>
 </html>
