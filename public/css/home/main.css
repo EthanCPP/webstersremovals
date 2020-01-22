@@ -134,6 +134,11 @@ a.btn {
 	margin: 20px 0 0 0;
 }
 
+.form-group
+label {
+	margin: 0;
+}
+
 @media screen and (max-width : 768px){
     .media {
     	display: block !important;

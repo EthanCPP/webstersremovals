@@ -9,7 +9,7 @@ class TestimonialsController extends Controller
 	private function getData() {
 		$data = array();
 
-		foreach (\App\Testimonials::where('approved', 0)->get() as $testimonial) {
+		foreach (\App\Testimonials::where('approved', 1)->get() as $testimonial) {
 			$testimonial_data = array();
 			$testimonial_data['name'] = $testimonial->name;
 			$testimonial_data['description'] = $testimonial->description;
@@ -21,6 +21,7 @@ class TestimonialsController extends Controller
 		$data = array_reverse($data);
 		return $data;
 	}
+
 	public function index()
 	{
 		return view('home.about.testimonials', ['data' => $this->getData()]);
@@ -51,5 +52,13 @@ class TestimonialsController extends Controller
     public function delete($id)
     {
     	return view('home.about.testimonials', ['check_delete' => $id, 'data' => $this->getData()]);
+    }
+
+    public function delete_confirm($id)
+    {
+    	$testimonial = \App\Testimonials::where('id', $id)->firstOrFail();
+    	$testimonial->delete();
+
+    	return view('home.about.testimonials', ['deleted' => '1', 'data' => $this->getData()]);
     }
 }

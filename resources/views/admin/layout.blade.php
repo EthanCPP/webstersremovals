@@ -29,15 +29,13 @@
                         <li class="nav-item">
                             <a class="w-link nav-link" href="/admin">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="w-link nav-link" href="/">Site Home</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="w-link nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/">Site Home</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
@@ -81,6 +79,7 @@
         <script src="https://kit.fontawesome.com/64a4d46fd3.js" crossorigin="anonymous"></script>
 
         <script src="/js/home/main.js"></script>
+        <script src="/js/admin/main.js"></script>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
     </body>

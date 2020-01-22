@@ -40,19 +40,21 @@ Route::get('/about/faq', function() {
 	return view('home.about.faq');
 });
 
-Route::get('/request-a-quote', function() { 
-	return view('home.request-a-quote');
-});
+Route::get('/request-a-quote', 'QuoteRequestController@index');
 
 /* testimonials */
 Route::get('/about/testimonials', 'TestimonialsController@index');
 Route::get('/about/testimonials/delete/{id}', 'TestimonialsController@delete')->middleware('auth');
 Route::post('/about/testimonials', 'TestimonialsController@new');
+Route::post('/about/testimonials/delete/{id}', 'TestimonialsController@delete_confirm')->middleware('auth');
 
 /* admin */
 Auth::routes();
 
 Route::get('/admin', 'AdminController@index');
+Route::get('/admin/testimonials/delete/{id}', 'AdminController@delete_testimonial')->middleware('auth');
+Route::get('/admin/testimonials/approve/{id}', 'AdminController@approve_testimonial')->middleware('auth');
+
 Route::get('/admin/test', function() {
 	return view('admin.test');
 })->middleware('auth');

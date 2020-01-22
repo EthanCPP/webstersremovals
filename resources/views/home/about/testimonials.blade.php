@@ -21,7 +21,27 @@
 		<?php
 		if (isset($check_delete)) {
 			if ($check_delete != 0) {
-				// TODO: implement are you sure feature
+				?>
+				<div class="alert alert-danger">
+					Are you sure you want to delete this testimonial?
+					<form action="" method="post">
+						@csrf
+						<input hidden type="text" name="delete_id" value="{{ $check_delete }}" />
+						<input type="submit" name="delete" class="btn btn-danger btn-sm" value="Yes" />
+						<a href="/about/testimonials" class="btn btn-primary btn-sm">Cancel</a>
+					</form>
+				</div>
+				<?php
+			}
+		}
+
+		if (isset($deleted)) {
+			if ($deleted == '1') {
+				?>
+				<div class="alert alert-success">
+					The testimonial was deleted
+				</div>
+				<?php
 			}
 		}
 		?>
