@@ -74,9 +74,16 @@
 		<div class="container">
 			<br /><br />
 			<hr />
-			Copyright &copy; Websters Removals Ltd {{ date("Y") }}. All Rights Reserved.
-			<br />
-			Built and managed by Ethan Webster | <a href="http://ethan-webster.com/" target="_blank">ethan-webster.com</a>
+			<div class="d-md-flex justify-content-between">
+				<div>
+					Copyright &copy; Websters Removals Ltd {{ date("Y") }}. All Rights Reserved.
+					<br />
+					Built and managed by Ethan Webster | <a href="http://ethan-webster.com/" target="_blank">ethan-webster.com</a>
+				</div>
+				<div>
+					<a href="/login">Admin Login</a>
+				</div>
+			</div>
 		</div>
 
 		<br /><br />
@@ -86,6 +93,7 @@
 		<script src="https://kit.fontawesome.com/64a4d46fd3.js" crossorigin="anonymous"></script>
 
 		<script src="/js/home/main.js"></script>
+		<script src="/js/home/testimonials.js"></script>
 
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 	</body>

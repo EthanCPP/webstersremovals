@@ -36,10 +36,6 @@ Route::get('/about/photo-gallery', function() {
 	return view('home.about.photo-gallery');
 });
 
-Route::get('/about/testimonials', function() { 
-	return view('home.about.testimonials');
-});
-
 Route::get('/about/faq', function() { 
 	return view('home.about.faq');
 });
@@ -47,3 +43,17 @@ Route::get('/about/faq', function() {
 Route::get('/request-a-quote', function() { 
 	return view('home.request-a-quote');
 });
+
+/* testimonials */
+Route::get('/about/testimonials', 'TestimonialsController@index');
+Route::get('/about/testimonials/delete/{id}', 'TestimonialsController@delete')->middleware('auth');
+Route::post('/about/testimonials', 'TestimonialsController@new');
+
+/* admin */
+Auth::routes();
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/test', function() {
+	return view('admin.test');
+})->middleware('auth');
+
