@@ -40,7 +40,10 @@ Route::get('/about/faq', function() {
 	return view('home.about.faq');
 });
 
+/* request a quote */
 Route::get('/request-a-quote', 'QuoteRequestController@index');
+Route::get('/request-a-quote/view/{auth}/{id}', 'QuoteRequestController@view')->middleware('auth');
+Route::post('/request-a-quote', 'QuoteRequestController@submit');
 
 /* testimonials */
 Route::get('/about/testimonials', 'TestimonialsController@index');

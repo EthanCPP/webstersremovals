@@ -53,6 +53,22 @@
         ?>
     </div>
     <div style="display: none;" id="tab-requests" class="tab-pane">
-        requests
+        <?php
+        if (isset($request_data)) {
+            if ($request_data == null)
+                echo "<br />There are no new quote requests";
+            else {
+                foreach ($request_data as $request) {
+                ?>
+                <div class="testimonial-div">
+                    <h4 style="margin: 0;">{{ $request['name'] }}</h4>
+                    <small style="color: #777; margin-top: -6px;">{{ $request['created_at'] }}</small>
+                    <br /><a href="/request-a-quote/view/{{ $request['auth_code'] }}/{{ $request['id']}}" class="btn btn-primary btn-sm">View</a>
+                </div>
+                <?php
+                } 
+            }
+        }
+        ?>
     </div>
 @endsection

@@ -20,6 +20,22 @@ class AdminController extends Controller
 
         return $t_data;
     }
+
+    private function getRequestData() {
+        $r_data = array();
+
+        foreach (\App\QuoteRequest::where('seen', 0)->get() as $request) {
+            $request_data = array();
+            $request_data['id'] = $request->id;
+            $request_data['name'] = $request->name;
+            $request_data['created_at'] = $request->created_at;
+            $request_data['auth_code'] = $request->auth_code;
+
+            array_push($r_data, $request_data);
+        }
+
+        return $r_data;
+    }
     /**
      * Create a new controller instance.
      *
@@ -37,10 +53,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        // get unapproved testimonials
         $t_data = $this->getTestimonialData();
+        $r_data = $this->getRequestData();
 
-        return view('admin.home', [ 'testimonial_data' => $t_data ]);
+        return view('admin.home', [ 'testimonial_data' => $t_data, 'request_data' => $r_data ]);
     }
 
     public function delete_testimonial($id) 
@@ -49,8 +65,11 @@ class AdminController extends Controller
         $testimonial->delete();
 
         $t_data = $this->getTestimonialData();
+        $r_data = $this->getRequestData();
 
-        return view('admin.home', [ 'testimonial_deleted' => '1', 'testimonial_data' => $t_data ]);
+        return view('admin.home', [ 'testimonial_deleted' => '1', 
+            'testimonial_data' => $t_data,
+            'request_data' => $r_data ]);
     }
 
     public function approve_testimonial($id)
@@ -60,7 +79,10 @@ class AdminController extends Controller
         $testimonial->save();
 
         $t_data = $this->getTestimonialData();
+        $r_data = $this->getRequestData();
 
-        return view('admin.home', [ 'testimonial_approved' => '1', 'testimonial_data' => $t_data ]);
+        return view('admin.home', [ 'testimonial_approved' => '1', 
+            'testimonial_data' => $t_data,
+            'request_data' => $r_data ]);
     }
 }
