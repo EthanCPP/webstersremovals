@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('home.home');
 });
 
+Route::get('/a/test', function() {
+	return view('home.home');
+});
+
 Route::get('/services/local-and-national', function() { 
 	return view('home.services.local-and-national');
 });
