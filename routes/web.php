@@ -20,6 +20,10 @@ Route::get('/a/test', function() {
 	return view('home.home');
 });
 
+Route::get('/test', function() {
+	return view('home.test');
+});
+
 Route::get('/services/local-and-national', function() { 
 	return view('home.services.local-and-national');
 });
