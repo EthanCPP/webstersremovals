@@ -26,6 +26,8 @@ $(document).ready(function() {
 		view_faders();
 	});
 
+	$('#padder').css('margin-top', $('.w-nav').outerHeight() + 'px');
+
 	$('.view-fader').css('display', 'block');
 	$('.view-fader').animate({ opacity: 0 }, 0);
 

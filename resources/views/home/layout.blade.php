@@ -25,7 +25,7 @@
 	</head>
 	<body>
 		<nav class="w-nav navbar navbar-expand-lg navbar-light">
-			<a class="w-logo navbar-brand" href="#">Websters Removals</a>
+			<a class="w-logo navbar-brand" href="/">Websters Removals</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -62,6 +62,8 @@
 				</ul>
 			</div>
 		</nav>
+
+		<div id="padder" style="margin-top: 20px;"></div>
 
 		@yield('banner-image')
 

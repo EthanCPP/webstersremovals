@@ -24,7 +24,8 @@ a:hover {
 }
 
 .w-nav {
-	position: fixed;
+	z-index: 100;
+	position: fixed !important;
 	display: block;
 	top: 0px;
 	left: 0;
