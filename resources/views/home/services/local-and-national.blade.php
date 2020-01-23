@@ -25,7 +25,7 @@
 	</div>
 	<div class="view-fader">
 		<div class="media">
-			<img src="/img/img-lan-3.jpg" class="img-box align-self-start mr-3">
+			<img src="/img/img-lan-4.jpg" class="img-box align-self-start mr-3">
 			<div class="media-body">
 				<h5 class="mt-0"></h5>
 				<p>When loaded all furniture is wrapped in padded removal blankets, Mattresses are placed in heavy duty mattress covers, clothing hung in garment carriers. As well as the contents of your house we also transport garage, workshop and garden items.</p>
