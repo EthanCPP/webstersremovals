@@ -307,7 +307,7 @@ class QuoteRequestController extends Controller
     	$quote_request->save();
     	$this->data['sent'] = '1';
 
-    	mail('webstersremovals@btconnect.com', 'Request a Quote', 'Someone has requested a quote. Go here to view it: http://webstersremovals.co.uk/request-a-quote/view/' . $quote_request->auth_code . '/' . $quote_request->id);
+    	mail('ewebster999@gmail.com', 'Request a Quote', 'Someone has requested a quote. Go here to view it: http://webstersremovals.co.uk/request-a-quote/view/' . $quote_request->auth_code . '/' . $quote_request->id);
 
     	return $this->index();
     }
