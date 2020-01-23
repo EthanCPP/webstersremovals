@@ -65,7 +65,7 @@
 			?>
 			<div class="view-fader testimonial-div">
 				<h4 style="margin: 0;">{{ $testimonial['name'] }}</h4>
-				<small style="color: #777; margin-top: -6px;">{{ $testimonial['created_at'] }}</small>
+				<!--<small style="color: #777; margin-top: -6px;">{{ $testimonial['created_at'] }}</small>-->
 				<p style="margin-top: 10px;">{{ $testimonial['description'] }}</p>
 				@guest
 				@else
