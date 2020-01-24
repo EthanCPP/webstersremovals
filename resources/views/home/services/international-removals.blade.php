@@ -5,7 +5,7 @@
 @endsection
 
 @section('banner-image')
-	<div class="banner-image" style="background-image: url('/img/img-intr-1.jpg');">
+	<div class="banner-image" style="background-image: url('/img/img-intr-2.jpg');">
 	</div>
 		<div class="banner-text">
 			<h1>International Removals</h1>
