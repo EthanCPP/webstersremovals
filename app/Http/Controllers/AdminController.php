@@ -34,6 +34,8 @@ class AdminController extends Controller
             array_push($r_data, $request_data);
         }
 
+        $r_data = array_reverse($r_data);
+
         return $r_data;
     }
 
