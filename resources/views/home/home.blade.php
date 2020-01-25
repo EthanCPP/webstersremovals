@@ -18,8 +18,8 @@
 		<div class="media">
 			<img src="/img/img-home-1.jpg" class="img-box align-self-start mr-3">
 			<div class="media-body">
-				<h5 class="mt-0">Your local removal firm</h5>
-				<p>From local moves to long distance moves. From and to Pembrokeshire. Dry, secure storage. International removals. Door to door all E.U. countries. Worldwide shipping. Professional packing. Packing supplies.</p>
+				<h5 class="mt-0">Your local removal company</h5>
+				<p>A family business moving families since 1969. Our modern purpose built removal trucks and trained uniformed fully employed staff can move your household locally, nationwide and worldwide. Please give us a call and rely on our fifty years of experience.</p>
 			</div>
 		</div>
 	</div>

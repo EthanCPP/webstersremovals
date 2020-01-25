@@ -18,8 +18,8 @@
 		<div class="media">
 			<img src="/img/img-lan-2.jpg" class="img-box align-self-start mr-3">
 			<div class="media-body">
-				<h5 class="mt-0">Who are we?</h5>
-				<p>We are experts in taking care of your possessions and making your move as "hassle free" as possible. With over fifty years experience, our staff are fully trained and uniformed, our vehicles are modern and well equipped.</p>
+				<h5 class="mt-0"></h5>
+				<p>If you are moving home locally or within the UK we are here to help. You can trust Websters Removals and our 50 years of experience to be the best choice for your move.</p>
 			</div>
 		</div>
 	</div>

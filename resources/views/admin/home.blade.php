@@ -30,6 +30,9 @@
         <li class="nav-item">
             <a href="#" class="nav-link" id="nav-requests">Quote Requests</a>  
         </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link" id="nav-stats">Site Statistics</a>  
+        </li>
     </ul>
     <div id="tab-testimonials" class="tab-pane">
         <?php
@@ -67,6 +70,19 @@
                 </div>
                 <?php
                 } 
+            }
+        }
+        ?>
+    </div>
+    <div style="display: none;" id="tab-stats" class="tab-pane">
+        <?php
+        if (isset($traffic_data)) {
+            if ($traffic_data != null) {
+                ?>
+                <br />
+                Total Visitors: {{ $traffic_data[0] }}<br />
+                New Visitors This Month: {{ $traffic_data[1] }}
+                <?php
             }
         }
         ?>

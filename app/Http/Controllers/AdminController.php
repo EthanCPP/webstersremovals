@@ -36,6 +36,23 @@ class AdminController extends Controller
 
         return $r_data;
     }
+
+    private function getTrafficData() 
+    {
+        $traffic_data = array(0, 0);
+            // [0] => total visitors
+            // [1] => new visitors this month
+
+        foreach (\App\Traffic::get() as $traffic) {
+            $traffic_data[0] ++;
+
+            if ($traffic->visit_time + (30 * 24 * 60 * 60) >= time())
+                $traffic_data[1] ++;
+        }
+
+        return $traffic_data;
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -55,8 +72,12 @@ class AdminController extends Controller
     {
         $t_data = $this->getTestimonialData();
         $r_data = $this->getRequestData();
+        $traffic_data = $this->getTrafficData();
 
-        return view('admin.home', [ 'testimonial_data' => $t_data, 'request_data' => $r_data ]);
+        return view('admin.home', [ 
+            'testimonial_data' => $t_data, 
+            'request_data' => $r_data,
+            'traffic_data' => $traffic_data ]);
     }
 
     public function delete_testimonial($id) 
@@ -66,10 +87,12 @@ class AdminController extends Controller
 
         $t_data = $this->getTestimonialData();
         $r_data = $this->getRequestData();
+        $traffic_data = $this->getTrafficData();
 
         return view('admin.home', [ 'testimonial_deleted' => '1', 
             'testimonial_data' => $t_data,
-            'request_data' => $r_data ]);
+            'request_data' => $r_data,
+            'traffic_data' => $traffic_data ]);
     }
 
     public function approve_testimonial($id)
@@ -80,9 +103,11 @@ class AdminController extends Controller
 
         $t_data = $this->getTestimonialData();
         $r_data = $this->getRequestData();
+        $traffic_data = $this->getTrafficData();
 
         return view('admin.home', [ 'testimonial_approved' => '1', 
             'testimonial_data' => $t_data,
-            'request_data' => $r_data ]);
+            'request_data' => $r_data,
+            'traffic_data' => $traffic_data ]);
     }
 }

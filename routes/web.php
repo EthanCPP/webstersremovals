@@ -12,9 +12,7 @@
 */
 
 // home views
-Route::get('/', function () {
-    return view('home.home');
-});
+Route::get('/', 'TrafficController@index');
 
 Route::get('/a/test', function() {
 	return view('home.home');
