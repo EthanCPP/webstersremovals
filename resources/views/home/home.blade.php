@@ -20,6 +20,8 @@
 			<div class="media-body">
 				<h5 class="mt-0">Your local removal company</h5>
 				<p>A family business moving families since 1969. Our modern purpose built removal trucks and trained uniformed fully employed staff can move your household locally, nationwide and worldwide. Please give us a call and rely on our fifty years of experience.</p>
+				<a target="_blank" href="https://www.facebook.com/WebstersRemovals" class="btn btn-primary">
+					<i class="fa fa-thumbs-up" style="color: #fff;"></i> Like Us On Facebook</a>
 			</div>
 		</div>
 	</div>
