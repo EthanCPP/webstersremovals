@@ -9,14 +9,14 @@
 	</div>
 		<div class="banner-text">
 			<h1>Websters Removals</h1>
-			<p>Established in 1969, we are the number one removal company in Pembrokeshire with a professional advantage over most of our competitors</p>
+			<p>Trusted by Pembrokeshire families since 1969</p>
 		</div>
 @endsection
 
 @section('content')
 	<div class="view-fader">
 		<div class="media">
-			<img src="/img/img-home-1.jpg" class="img-box align-self-start mr-3">
+			<img src="/img/img-home-3.jpg" class="img-box align-self-start mr-3">
 			<div class="media-body">
 				<h5 class="mt-0">Your local removal company</h5>
 				<p>A family business moving families since 1969. Our modern purpose built removal trucks and trained uniformed fully employed staff can move your household locally, nationwide and worldwide. Please give us a call and rely on our fifty years of experience.</p>
