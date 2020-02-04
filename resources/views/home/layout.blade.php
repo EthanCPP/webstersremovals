@@ -40,10 +40,12 @@
 							Our Services
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/services/small-moves">Small Moves</a>
 							<a class="dropdown-item" href="/services/local-and-national">Local & National</a>
 							<a class="dropdown-item" href="/services/storage">Storage</a>
 							<a class="dropdown-item" href="/services/international-removals">International Removals</a>
 							<a class="dropdown-item" href="/services/packing">Packing</a>
+							<a class="dropdown-item" href="/services/piano-moves">Piano Moves</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">

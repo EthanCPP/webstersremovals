@@ -22,6 +22,10 @@ Route::get('/test', function() {
 	return view('home.test');
 });
 
+Route::get('/services/small-moves', function() {
+	return view('home.services.small-moves');
+});
+
 Route::get('/services/local-and-national', function() { 
 	return view('home.services.local-and-national');
 });
@@ -36,6 +40,10 @@ Route::get('/services/international-removals', function() {
 
 Route::get('/services/packing', function() { 
 	return view('home.services.packing');
+});
+
+Route::get('/services/piano-moves', function() {
+	return view('home.services.piano-moves');
 });
 
 Route::get('/about/photo-gallery', function() { 
