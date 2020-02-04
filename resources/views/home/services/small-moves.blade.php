@@ -5,7 +5,7 @@
 @endsection
 
 @section('banner-image')
-	<div class="banner-image" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/img/img-sm-2.jpg');">
+	<div class="banner-image" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/img/img-sm-2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
 	</div>
 		<div class="banner-text">
 			<h1>Small Moves &amp; Part Loads</h1>
